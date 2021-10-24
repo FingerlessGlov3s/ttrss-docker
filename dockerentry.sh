@@ -18,7 +18,12 @@ for f in /usr/sbin/php-fpm*
 do
   $f
 done
+echo "Started PHP"
 
 # Run Ngnix
 echo "Starting Nginx"
-/usr/sbin/nginx -g "daemon off;"
+/usr/sbin/nginx
+echo "Started Nginx"
+
+# Start ttrss service
+sudo -Eu www-data php /var/www/html/update_daemon2.php
