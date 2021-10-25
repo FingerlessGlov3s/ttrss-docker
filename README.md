@@ -1,6 +1,6 @@
-# FingerlessGlov3s' TinyTiny RSS container
+# FingerlessGlov3s' Tiny Tiny RSS container
 
-This is a simple docker container to deploy [TinyTiny RSS](https://tt-rss.org/) as a container, only tested with mysql(mariadb) backend.
+This is a simple docker container to deploy [Tiny Tiny RSS](https://tt-rss.org/) as a container, only tested with mysql(mariadb) backend.
 
 My instructions assume you use the path /docker for your docker containers.
 
@@ -38,7 +38,7 @@ My instructions assume you use the path /docker for your docker containers.
           - TTRSS_SMTP_SERVER=mx.mydomain.com:587
           - TTRSS_SMTP_SECURE=tls
           - TTRSS_SMTP_FROM_ADDRESS=rss@mydomain.com
-          - TTRSS_SMTP_FROM_NAME=TinyTiny RSS
+          - TTRSS_SMTP_FROM_NAME=Tiny Tiny RSS
         volumes:
           - /docker/ttrss/plugins.local:/var/www/html/plugins.local
         expose:
