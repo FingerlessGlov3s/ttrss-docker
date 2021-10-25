@@ -27,18 +27,18 @@ My instructions assume you use the path /docker for your docker containers.
         hostname: ttrss
         restart: always
         environment:
-          TTRSS_DB_TYPE: mysql
-          TTRSS_DB_HOST: mariadb
-          TTRSS_DB_PORT: 3306
-          TTRSS_DB_NAME: ttrss
-          TTRSS_DB_USER: ttrss
-          TTRSS_DB_PASS: ttrsspassword
-          TTRSS_SELF_URL_PATH: http://rss.mydomain.com
-          TTRSS_PLUGINS: auth_internal,mailer_smtp
-          TTRSS_SMTP_SERVER: mx.mydomain.com:587
-          TTRSS_SMTP_SECURE: tls
-          TTRSS_SMTP_FROM_ADDRESS: rss@mydomain.com
-          TTRSS_SMTP_FROM_NAME: TinyTiny RSS
+          - TTRSS_DB_TYPE=mysql
+          - TTRSS_DB_HOST=mariadb
+          - TTRSS_DB_PORT=3306
+          - TTRSS_DB_NAME=ttrss
+          - TTRSS_DB_USER=ttrss
+          - TTRSS_DB_PASS=PASSWORD
+          - TTRSS_SELF_URL_PATH=https://rss.mydomain.com
+          - TTRSS_PLUGINS=auth_internal,mailer_smtp
+          - TTRSS_SMTP_SERVER=mx.mydomain.com:587
+          - TTRSS_SMTP_SECURE=tls
+          - TTRSS_SMTP_FROM_ADDRESS=rss@mydomain.com
+          - TTRSS_SMTP_FROM_NAME=TinyTiny RSS
         volumes:
           - /docker/ttrss/plugins.local:/var/www/html/plugins.local
         expose:

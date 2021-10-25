@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Note: TTRSS uses UTC Time"
+
 # Fix PHP FPM Env Vars and sock location
 for f in /etc/php/*/fpm/pool.d/www.conf
 do
